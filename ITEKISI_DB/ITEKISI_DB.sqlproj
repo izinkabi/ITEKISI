@@ -78,4 +78,7 @@
   <ItemGroup>
     <RefactorLog Include="ITEKISI_DB.refactorlog" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="PublishLocation\ITEKISI_DB.publish.xml" />
+  </ItemGroup>
 </Project>
