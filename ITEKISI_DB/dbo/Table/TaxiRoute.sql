@@ -1,0 +1,6 @@
+﻿CREATE TABLE [dbo].[TaxiRoute]
+(
+	[Id] INT NOT NULL PRIMARY KEY, 
+    [Name] VARCHAR(50) NULL, 
+    [TaxiId] INT NULL FOREIGN KEY REFERENCES Taxi(Id)
+)

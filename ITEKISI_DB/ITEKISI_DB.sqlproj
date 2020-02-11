@@ -64,5 +64,18 @@
   </ItemGroup>
   <ItemGroup>
     <Build Include="dbo\Table\Users.sql" />
+    <Build Include="dbo\Table\Profile.sql" />
+    <Build Include="dbo\Table\Access.sql" />
+    <Build Include="dbo\Table\Activation.sql" />
+    <Build Include="dbo\Table\Country.sql" />
+    <Build Include="dbo\Table\Province.sql" />
+    <Build Include="dbo\Table\City.sql" />
+    <Build Include="dbo\Table\Street.sql" />
+    <Build Include="dbo\Table\Taxi.sql" />
+    <Build Include="dbo\Table\TaxiRank.sql" />
+    <Build Include="dbo\Table\TaxiRoute.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <RefactorLog Include="ITEKISI_DB.refactorlog" />
   </ItemGroup>
 </Project>
