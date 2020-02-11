@@ -65,4 +65,7 @@
   <ItemGroup>
     <Build Include="dbo\Table\Users.sql" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="PublishLocation\ITEKISI_DB.publish.xml" />
+  </ItemGroup>
 </Project>
