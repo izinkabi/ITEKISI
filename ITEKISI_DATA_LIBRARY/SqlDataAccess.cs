@@ -34,7 +34,7 @@ namespace ITEKISI_DATA_LIBRARY
 
             using (IDbConnection connection = new SqlConnection(connectionString))
             {
-               connection.Execute(storedProcedure, parameters, commandType: CommandType.StoredProcedure)
+                connection.Execute(storedProcedure, parameters, commandType: CommandType.StoredProcedure);
                 
             }
         }

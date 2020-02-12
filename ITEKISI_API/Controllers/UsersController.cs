@@ -8,6 +8,7 @@ using System.Web.Http;
 
 namespace ITEKISI_API.Controllers
 {
+    [Authorize]
     public class UsersController : ApiController
     {
 
