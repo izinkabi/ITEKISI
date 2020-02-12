@@ -8,6 +8,7 @@ using System.Data;
 using System.Data.SqlClient;
 using Dapper;
 
+
 namespace ITEKISI_DATA_LIBRARY
 {
     class SqlDataAccess
@@ -28,7 +29,7 @@ namespace ITEKISI_DATA_LIBRARY
             }
         }
 
-        public List<T> SaveData<T>(string storedProcedure, T parameters, string connectionStringName)
+        public void SaveData<T>(string storedProcedure, T parameters, string connectionStringName)
         {
             string connectionString = GetConnectionString(connectionStringName);
 
@@ -37,6 +38,7 @@ namespace ITEKISI_DATA_LIBRARY
                 connection.Execute(storedProcedure, parameters, commandType: CommandType.StoredProcedure);
                 
             }
+            
         }
     }
 }
