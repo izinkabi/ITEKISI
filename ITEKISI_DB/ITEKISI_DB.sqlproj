@@ -63,7 +63,7 @@
     <Folder Include="dbo\Stored Procedures" />
   </ItemGroup>
   <ItemGroup>
-    <Build Include="dbo\Table\Users.sql" />
+    <Build Include="dbo\Table\User.sql" />
     <Build Include="dbo\Table\Profile.sql" />
     <Build Include="dbo\Table\Access.sql" />
     <Build Include="dbo\Table\Activation.sql" />
@@ -81,5 +81,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="PublishLocation\ITEKISI_DB.publish.xml" />
+    <None Include="PublishLocation\ITEKISI_DB1.publish.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Accessibility" />
   </ItemGroup>
 </Project>

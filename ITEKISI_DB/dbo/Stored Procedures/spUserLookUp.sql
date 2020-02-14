@@ -6,6 +6,6 @@ begin
 	set nocount on;
 
 	SELECT Username, Password, ProfileId
-	from [dbo].[Users]
+	from [dbo].[User]
 	where Id = @Id;
 end
