@@ -15,7 +15,7 @@ namespace ITEKISI_DATA_LIBRARY.DataAccess
             var p = new { Id = Id };
 
             SqlDataAccess sql = new SqlDataAccess();
-            var output = sql.LoadData<UserModel, dynamic>("dbo.spUserLookUp", p, "ItekisiBD");
+            var output = sql.LoadData<UserModel, dynamic>("dbo.spUserLookUp", p, "ITEKISI_DB");
             return output;
         }
     }

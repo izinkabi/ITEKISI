@@ -80,10 +80,9 @@
     <RefactorLog Include="ITEKISI_DB.refactorlog" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="PublishLocation\ITEKISI_DB.publish.xml" />
-    <None Include="PublishLocation\ITEKISI_DB1.publish.xml" />
+    <Reference Include="Accessibility" />
   </ItemGroup>
   <ItemGroup>
-    <Reference Include="Accessibility" />
+    <None Include="PublishLocation\ITEKISI_DB.publish.xml" />
   </ItemGroup>
 </Project>

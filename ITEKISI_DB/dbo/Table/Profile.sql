@@ -7,4 +7,4 @@
     [Gender] VARCHAR(50) NULL, 
     [Address] VARCHAR(MAX) NULL, 
     [AccessId] INT NULL FOREIGN KEY REFERENCES Access(Id)
-)
+    )

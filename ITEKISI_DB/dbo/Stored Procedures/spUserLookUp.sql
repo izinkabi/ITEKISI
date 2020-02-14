@@ -5,7 +5,7 @@ begin
 --stored procedure for getting user information
 	set nocount on;
 
-	SELECT Username, Password, ProfileId
-	from [dbo].[User]
+	SELECT Username, Password
+	from dbo.Users
 	where Id = @Id;
 end
