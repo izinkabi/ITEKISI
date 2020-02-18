@@ -75,6 +75,7 @@
     <Build Include="dbo\Table\TaxiRank.sql" />
     <Build Include="dbo\Table\TaxiRoute.sql" />
     <Build Include="dbo\Stored Procedures\spUserLookUp.sql" />
+    <Build Include="dbo\Stored Procedures\spUserInfor.sql" />
   </ItemGroup>
   <ItemGroup>
     <RefactorLog Include="ITEKISI_DB.refactorlog" />

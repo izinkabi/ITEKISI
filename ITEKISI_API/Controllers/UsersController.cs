@@ -15,12 +15,12 @@ namespace ITEKISI_API.Controllers
     [RoutePrefix("api/Users")]
     public class UsersController : ApiController
     {
-        public List<UserModel> GetById()
+        UserData userData = new UserData();
+        public UserModel GetById()
         {
             string userId = RequestContext.Principal.Identity.GetUserId();
-            UserData userData = new UserData();
-
-            return userData.GetUserById(userId);
+            return userData.GetUserById(userId).First();
         }
+       
     }
 }
