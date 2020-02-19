@@ -52,8 +52,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DataAccess\ProfileData.cs" />
+    <Compile Include="DataAccess\TaxiRankData.cs" />
     <Compile Include="DataAccess\UserData.cs" />
     <Compile Include="Models\ProfileModel.cs" />
+    <Compile Include="Models\TaxiRankModel.cs" />
     <Compile Include="Models\UserModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Internal\DataAccess\SqlDataAccess.cs" />

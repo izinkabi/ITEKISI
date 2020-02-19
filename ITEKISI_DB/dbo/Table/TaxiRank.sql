@@ -2,6 +2,5 @@
 (
 	[Id] INT NOT NULL PRIMARY KEY, 
     [Name] VARCHAR(50) NULL, 
-    [Adress] VARCHAR(50) NULL, 
-    [TaxiId] INT NULL FOREIGN KEY REFERENCES Taxi(Id)
+    [Address] VARCHAR(50) NULL 
 )
