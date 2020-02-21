@@ -20,7 +20,7 @@ namespace ITEKISI_DATA_LIBRARY.DataAccess
         public List<TaxiRankModel> GetAllTaxiRank()
         {
             SqlDataAccess sql = new SqlDataAccess();
-            var output = sql.LoadData<TaxiRankModel, dynamic>("dbo.spTaxiRanksLookUp", new { }, "ITEKISI_DB");
+            var output = sql.LoadData<TaxiRankModel, dynamic>("dbo.spTaxiRanksLookUP", new { }, "ITEKISI_DB");
             return output;
         }
     }
