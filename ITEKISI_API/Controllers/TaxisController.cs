@@ -31,6 +31,12 @@ namespace ITEKISI_API.Controllers
             TaxiData taxi = new TaxiData();
             taxi.PostTaxiInfo(val);
         }
+
+        public void DeleteTaxi(int Id)
+        {
+            TaxiData taxi = new TaxiData();
+            taxi.DeleteTaxiInfor(Id );
+        }
        
     }
 }

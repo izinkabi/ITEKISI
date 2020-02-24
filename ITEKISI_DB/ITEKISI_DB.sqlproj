@@ -82,6 +82,8 @@
     <Build Include="dbo\Stored Procedures\spTaxisLookUp.sql" />
     <Build Include="dbo\Stored Procedures\spTaxiInsert.sql" />
     <Build Include="dbo\Stored Procedures\spTaxiRankInsert.sql" />
+    <Build Include="dbo\Stored Procedures\spTaxiRemove.sql" />
+    <Build Include="dbo\Stored Procedures\spTaxiRankRemove.sql" />
   </ItemGroup>
   <ItemGroup>
     <RefactorLog Include="ITEKISI_DB.refactorlog" />

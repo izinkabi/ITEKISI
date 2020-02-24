@@ -35,5 +35,12 @@ namespace ITEKISI_API.Controllers
             
 
         }
+        [HttpDelete]
+        public void DeleteTaxiRank(int id)
+        {
+            TaxiRankData rankData = new TaxiRankData();
+            
+            rankData.RemoveTaxiRank(id);
+        }
     }
 }

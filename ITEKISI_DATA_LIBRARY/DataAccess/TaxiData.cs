@@ -30,5 +30,12 @@ namespace ITEKISI_DATA_LIBRARY.DataAccess
             SqlDataAccess sql = new SqlDataAccess();
             sql.SaveData<TaxiModel>("dbo.spTaxiInsert", val, "ITEKISI_DB");
         }
+
+        public void DeleteTaxiInfor(int id)
+        {
+            SqlDataAccess sql = new SqlDataAccess();
+            sql.SaveData("dbo.spTaxiRemove", id, "ITEKISI_DB");
+        }
+
     }
 }
