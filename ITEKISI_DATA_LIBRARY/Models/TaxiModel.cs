@@ -12,6 +12,6 @@ namespace ITEKISI_DATA_LIBRARY.Models
         public string From { get; set; }
         public string To { get; set; }
         public string Location { get; set; }
-        public int Price { get; set; }
+        public string Price { get; set; }
     }
 }

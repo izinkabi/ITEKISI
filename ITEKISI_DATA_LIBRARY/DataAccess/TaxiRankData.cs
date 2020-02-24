@@ -23,5 +23,11 @@ namespace ITEKISI_DATA_LIBRARY.DataAccess
             var output = sql.LoadData<TaxiRankModel, dynamic>("dbo.spTaxiRanksLookUP", new { }, "ITEKISI_DB");
             return output;
         }
+
+        public void PostRankData(TaxiRankModel val)
+        {
+            SqlDataAccess sql = new SqlDataAccess();
+            sql.SaveData<TaxiRankModel>("dbo.spTaxiRankInsert", val, "ITEKISI_DB");
+        }
     }
 }

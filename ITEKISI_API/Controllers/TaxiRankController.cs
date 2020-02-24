@@ -26,5 +26,14 @@ namespace ITEKISI_API.Controllers
             TaxiRankData taxiRanks = new TaxiRankData();
             return taxiRanks.GetAllTaxiRank().ToList();
         }
+        // POST: api/TaxiRank/5
+        [HttpPost]
+        public void PostTaxiRank(TaxiRankModel val)
+        {
+            TaxiRankData taxiRank = new TaxiRankData();
+            taxiRank.PostRankData(val);
+            
+
+        }
     }
 }

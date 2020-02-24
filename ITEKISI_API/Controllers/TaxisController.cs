@@ -26,7 +26,11 @@ namespace ITEKISI_API.Controllers
             TaxiData taxi = new TaxiData();
             return taxi.GetTaxis().ToList();
         }
-
+        public void PostTaxi(TaxiModel val)
+        {
+            TaxiData taxi = new TaxiData();
+            taxi.PostTaxiInfo(val);
+        }
        
     }
 }

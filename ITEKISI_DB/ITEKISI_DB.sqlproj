@@ -80,6 +80,8 @@
     <Build Include="dbo\Stored Procedures\spTaxiLookUp.sql" />
     <Build Include="dbo\Stored Procedures\spTaxiRanksLookUP.sql" />
     <Build Include="dbo\Stored Procedures\spTaxisLookUp.sql" />
+    <Build Include="dbo\Stored Procedures\spTaxiInsert.sql" />
+    <Build Include="dbo\Stored Procedures\spTaxiRankInsert.sql" />
   </ItemGroup>
   <ItemGroup>
     <RefactorLog Include="ITEKISI_DB.refactorlog" />
