@@ -29,10 +29,12 @@ namespace ITEKISI_DATA_LIBRARY.DataAccess
             SqlDataAccess sql = new SqlDataAccess();
             sql.SaveData<TaxiRankModel>("dbo.spTaxiRankInsert", val, "ITEKISI_DB");
         }
-        public void RemoveTaxiRank(int id)
+        public int RemoveTaxiRank(int id)
         {
+           
             SqlDataAccess sqlData = new SqlDataAccess();
-            sqlData.SaveData("dbo.spTaxiRankRemove", id, "ITEKISI_DB");
+            int rowsaffected = sqlData.SaveData("dbo.spTaxiRankRemove",new { Id=id}, "ITEKISI_DB");
+            return rowsaffected;
             
         }
     }

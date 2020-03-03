@@ -29,15 +29,16 @@ namespace ITEKISI_DATA_LIBRARY.Internal.DataAcces
             }
         }
 
-        public void SaveData<T>(string storedProcedure, T parameters, string connectionStringName)
+        public int SaveData<T>(string storedProcedure, T parameters, string connectionStringName)
         {
             string connectionString = GetConnectionString(connectionStringName);
 
             using (IDbConnection connection = new SqlConnection(connectionString))
             {
-                connection.Execute(storedProcedure, parameters, commandType: CommandType.StoredProcedure);
-                
+             var affectedrows = connection.Execute(storedProcedure, parameters, commandType: CommandType.StoredProcedure);
+             return affectedrows;
             }
+           
         }
     }
 }

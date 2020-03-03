@@ -1,8 +1,9 @@
 ﻿CREATE PROCEDURE [dbo].[spTaxiRankRemove]
-	@id INT 
-
+	@id INT  = 0
+	
 AS
 BEGIN
-	Delete From  TaxiRank 
+ SET NOCOUNT ON
+	Delete From TaxiRank 
 	Where Id = @id
 END

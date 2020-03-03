@@ -23,5 +23,8 @@ namespace ITEKISI_API.Controllers
             string userId = RequestContext.Principal.Identity.GetUserId();
             return profileData.GetProfileById(userId).First();
         }
+
+
     }
+
 }
