@@ -84,6 +84,10 @@
     <Build Include="dbo\Stored Procedures\spTaxiRankInsert.sql" />
     <Build Include="dbo\Stored Procedures\spTaxiRemove.sql" />
     <Build Include="dbo\Stored Procedures\spTaxiRankRemove.sql" />
+    <Build Include="dbo\Stored Procedures\spTaxiRouteLookUp.sql" />
+    <Build Include="dbo\Stored Procedures\spTaxiRoutesLookUP.sql" />
+    <Build Include="dbo\Stored Procedures\spTaxiRouteInsert.sql" />
+    <Build Include="dbo\Stored Procedures\spTaxiRouteRemove.sql" />
   </ItemGroup>
   <ItemGroup>
     <RefactorLog Include="ITEKISI_DB.refactorlog" />
@@ -92,6 +96,6 @@
     <Reference Include="Accessibility" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="PublishLocation\ITEKISI_DB.publish.xml" />
+    <None Include="PublishLocation\Publish_ITEKISI_DB.publish.publish.xml" />
   </ItemGroup>
 </Project>

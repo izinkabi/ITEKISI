@@ -14,4 +14,9 @@ namespace ITEKISI_DATA_LIBRARY.Models
         public string Location { get; set; }
         public string Price { get; set; }
     }
+    public class DeleteTaxiBindingModel
+    {
+        [Required]
+        public int Id { get; set; }
+    }
 }

@@ -58,6 +58,7 @@
     <Compile Include="DataAccess\TaxiRouteData.cs" />
     <Compile Include="DataAccess\UserData.cs" />
     <Compile Include="Models\ProfileModel.cs" />
+    <Compile Include="Models\RequiredAttribute.cs" />
     <Compile Include="Models\TaxiModel.cs" />
     <Compile Include="Models\TaxiRankModel.cs" />
     <Compile Include="Models\TaxiRouteModel.cs" />
