@@ -1,4 +1,5 @@
-﻿using ITEKISI_DATA_LIBRARY.DataAccess;
+﻿using ITEKISI_API.Models;
+using ITEKISI_DATA_LIBRARY.DataAccess;
 using ITEKISI_DATA_LIBRARY.Models;
 using System;
 using System.Collections.Generic;
@@ -13,11 +14,29 @@ namespace ITEKISI_API.Controllers
 
     public class TaxisController : ApiController
     {
-        // GET: api/Taxis
+        // GET: api/Taxi
         public TaxiModel GetTaxiById(int id)
         {
-            TaxiData taxi = new TaxiData();
-            return taxi.GetTaxiById(id).First();
+            
+            try
+            {
+                TaxiData taxi = new TaxiData();
+               return taxi.GetTaxiById(id).First();
+
+            }
+            catch (Exception ex)
+            {
+
+                throw new ArgumentException("We cannot find the taxi you are looking for", ex);
+                
+            }
+            finally
+            {
+                //DO SOMETHING HERE LATEr
+
+                
+            }
+           
         }
 
         // GET: api/Taxis/5
@@ -32,10 +51,11 @@ namespace ITEKISI_API.Controllers
             taxi.PostTaxiInfo(val);
         }
 
-        public void DeleteTaxi(int Id)
+        public int DeleteTaxi(ITEKISI_DATA_LIBRARY.Models.DeleteTaxiBindingModel model)
         {
             TaxiData taxi = new TaxiData();
-            taxi.DeleteTaxiInfor(Id );
+            int rowsAfected = taxi.DeleteTaxiInfor(model);
+            return rowsAfected;
         }
        
     }

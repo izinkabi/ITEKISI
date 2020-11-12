@@ -31,10 +31,11 @@ namespace ITEKISI_DATA_LIBRARY.DataAccess
             sql.SaveData<TaxiModel>("dbo.spTaxiInsert", val, "ITEKISI_DB");
         }
 
-        public void DeleteTaxiInfor(int id)
+        public int DeleteTaxiInfor(DeleteTaxiBindingModel model)
         {
             SqlDataAccess sql = new SqlDataAccess();
-            sql.SaveData("dbo.spTaxiRemove", id, "ITEKISI_DB");
+            int rowsAffected = sql.SaveData("dbo.spTaxiRemove", model, "ITEKISI_DB");
+            return rowsAffected;
         }
 
     }
