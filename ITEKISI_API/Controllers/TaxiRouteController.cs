@@ -43,6 +43,7 @@ namespace ITEKISI_API.Controllers
             TaxiRouteData taxiRoute = new TaxiRouteData();
             return taxiRoute.GetTaxiRoutes().ToList();
         }
+        [HttpPost]
         public void PostTaxiRoute(TaxiRouteModel val)
         {
             TaxiRouteData taxiRoute = new TaxiRouteData();
@@ -55,7 +56,8 @@ namespace ITEKISI_API.Controllers
             int rowsAfected = taxiRoute.DeleteTaxiRouteInfor(model);
             return rowsAfected;
         }
+  
+        }
 
     }
-}
 }
