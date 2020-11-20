@@ -1,5 +1,4 @@
-﻿using ITEKISI_API.Models;
-using ITEKISI_DATA_LIBRARY.DataAccess;
+﻿using ITEKISI_DATA_LIBRARY.DataAccess;
 using ITEKISI_DATA_LIBRARY.Models;
 using System;
 using System.Collections.Generic;
@@ -10,7 +9,7 @@ using System.Web.Http;
 
 namespace ITEKISI_API.Controllers
 {
-    public class TaxiRouteController : Controller
+    public class TaxiRouteController : ApiController
     {
         // GET: api/Taxi
         public TaxiRouteModel GetTaxiRouteById(int id)
@@ -18,7 +17,7 @@ namespace ITEKISI_API.Controllers
 
             try
             {
-                TaxiRouteData taxiRoute = new TaxiData();
+                TaxiRouteData taxiRoute = new TaxiRouteData();
                 return taxiRoute.GetTaxiRouteById(id).First();
 
             }
@@ -41,23 +40,25 @@ namespace ITEKISI_API.Controllers
         public List<TaxiRouteModel> GetTaxiRoutes()
         {
             TaxiRouteData taxiRoute = new TaxiRouteData();
-            return taxiRoute.GetTaxiRoutes().ToList();
+            return taxiRoute.GetAllTaxiRoute().ToList();
         }
+
         [HttpPost]
+
         public void PostTaxiRoute(TaxiRouteModel val)
         {
             TaxiRouteData taxiRoute = new TaxiRouteData();
-            taxiRoute.PostTaxiRouteInfo(val);
+            taxiRoute.PostRouteData(val);
         }
 
         public int DeleteTaxiRoute(DeleteTaxiRouteBindingModel model)
         {
             TaxiRouteData taxiRoute = new TaxiRouteData();
-            int rowsAfected = taxiRoute.DeleteTaxiRouteInfor(model);
+            int rowsAfected = taxiRoute.RemoveTaxiRoute(model);
             return rowsAfected;
         }
   
-        }
+        
 
     }
 }
