@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using ITEKISI_DATA_LIBRARY.Internal.DataAcces;
 using ITEKISI_DATA_LIBRARY.Models;
+
 namespace ITEKISI_DATA_LIBRARY.DataAccess
 {
     public class TaxiRouteData
@@ -13,7 +14,7 @@ namespace ITEKISI_DATA_LIBRARY.DataAccess
         {
             var p = new { Id = Id };
             SqlDataAccess sql = new SqlDataAccess();
-            var output = sql.LoadData<TaxiRankModel, dynamic>("dbo.spTaxiRouteLookUp", p, "ITEKISI_DB");
+            var output = sql.LoadData<TaxiRouteModel, dynamic>("dbo.spTaxiRouteLookUp", p, "ITEKISI_DB");
             return output;
         }
         public List<TaxiRouteModel> GetAllTaxiRoute()
@@ -28,14 +29,14 @@ namespace ITEKISI_DATA_LIBRARY.DataAccess
             SqlDataAccess sql = new SqlDataAccess();
             sql.SaveData<TaxiRouteModel>("dbo.spTaxiRouteInsert", val, "ITEKISI_DB");
         }
-        public int RemoveTaxiRoute(int id)
+        public int RemoveTaxiRoute(DeleteTaxiRouteBindingModel model)
         {
-
+             
             SqlDataAccess sqlData = new SqlDataAccess();
-            int rowsaffected = sqlData.SaveData("dbo.spTaxiRouteRemove", new { Id = id }, "ITEKISI_DB");
+            int rowsaffected = sqlData.SaveData("dbo.spTaxiRouteRemove", new { Id = model }, "ITEKISI_DB");
             return rowsaffected;
 
         }
     }
 }
-}
+

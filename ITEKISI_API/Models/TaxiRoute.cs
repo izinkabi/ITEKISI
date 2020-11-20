@@ -34,9 +34,7 @@ namespace ITEKISI_API.Models
 
     }
     public class DeleteTaxiRouteBindingModel
-    {
-        [Required]
-        [Display(Name = "Id")]
+    {       
         public int Id { get; set; }
     }
 }
