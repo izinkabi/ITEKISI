@@ -61,6 +61,7 @@
     <Folder Include="dbo\Table" />
     <Folder Include="dbo\Views" />
     <Folder Include="dbo\Stored Procedures" />
+    <Folder Include="dbo\Database diagrams" />
   </ItemGroup>
   <ItemGroup>
     <Build Include="dbo\Table\User.sql" />
@@ -88,6 +89,9 @@
     <Build Include="dbo\Stored Procedures\spTaxiRoutesLookUP.sql" />
     <Build Include="dbo\Stored Procedures\spTaxiRouteInsert.sql" />
     <Build Include="dbo\Stored Procedures\spTaxiRouteRemove.sql" />
+    <Build Include="dbo\Stored Procedures\spProfilesLookUp.sql" />
+    <Build Include="dbo\Stored Procedures\spProfileLookUp.sql" />
+    <Build Include="dbo\Stored Procedures\spProfileRemove.sql" />
   </ItemGroup>
   <ItemGroup>
     <RefactorLog Include="ITEKISI_DB.refactorlog" />
@@ -97,5 +101,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="PublishLocation\Publish_ITEKISI_DB.publish.publish.xml" />
+    <None Include="ITEKISI_DB_Z.publish.xml" />
   </ItemGroup>
 </Project>

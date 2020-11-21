@@ -1,10 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using ITEKISI_DATA_LIBRARY.Internal.DataAcces;
+﻿using ITEKISI_DATA_LIBRARY.Internal.DataAcces;
 using ITEKISI_DATA_LIBRARY.Models;
+using System.Collections.Generic;
 
 namespace ITEKISI_DATA_LIBRARY.DataAccess
 {
@@ -31,7 +27,7 @@ namespace ITEKISI_DATA_LIBRARY.DataAccess
         }
         public int RemoveTaxiRoute(DeleteTaxiRouteBindingModel model)
         {
-             
+
             SqlDataAccess sqlData = new SqlDataAccess();
             int rowsaffected = sqlData.SaveData("dbo.spTaxiRouteRemove", new { Id = model }, "ITEKISI_DB");
             return rowsaffected;

@@ -1,9 +1,8 @@
-﻿using System.Threading.Tasks;
+﻿using ITEKISI_API.Models;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin;
-using ITEKISI_API.Models;
 
 namespace ITEKISI_API
 {
