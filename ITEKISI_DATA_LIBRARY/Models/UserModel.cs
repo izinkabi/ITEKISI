@@ -1,16 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace ITEKISI_DATA_LIBRARY.Models
+﻿namespace ITEKISI_DATA_LIBRARY.Models
 {
-   public class UserModel
+    public class UserModel
     {
         public string Id { get; set; }
         public string Username { get; set; }
         public string Password { get; set; }
-   
+
     }
 }

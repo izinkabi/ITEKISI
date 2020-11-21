@@ -1,11 +1,7 @@
-﻿using ITEKISI_API.Models;
-using ITEKISI_DATA_LIBRARY.DataAccess;
+﻿using ITEKISI_DATA_LIBRARY.DataAccess;
 using ITEKISI_DATA_LIBRARY.Models;
-using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Net;
-using System.Net.Http;
 using System.Web.Http;
 
 namespace ITEKISI_API.Controllers
@@ -15,7 +11,7 @@ namespace ITEKISI_API.Controllers
     [RoutePrefix("api/TaxiRanks")]
     public class TaxiRankController : ApiController
     {
-             // GET: api/TaxiRank/5
+        // GET: api/TaxiRank/5
         public TaxiRankModel GetById(int id)
         {
             TaxiRankData taxiRank = new TaxiRankData();
@@ -32,7 +28,7 @@ namespace ITEKISI_API.Controllers
         {
             TaxiRankData taxiRank = new TaxiRankData();
             taxiRank.PostRankData(val);
-            
+
 
         }
 
@@ -40,7 +36,7 @@ namespace ITEKISI_API.Controllers
         public int DeleteTaxiRank(int id)
         {
             TaxiRankData rankData = new TaxiRankData();
-     
+
             int rowsaffected = rankData.RemoveTaxiRank(id);
             return rowsaffected;
         }

@@ -1,12 +1,8 @@
-﻿using Microsoft.AspNet.Identity;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net;
-using System.Net.Http;
-using System.Web.Http;
+﻿using ITEKISI_DATA_LIBRARY.DataAccess;
 using ITEKISI_DATA_LIBRARY.Models;
-using ITEKISI_DATA_LIBRARY.DataAccess;
+using Microsoft.AspNet.Identity;
+using System.Linq;
+using System.Web.Http;
 
 
 namespace ITEKISI_API.Controllers
@@ -21,6 +17,7 @@ namespace ITEKISI_API.Controllers
             string userId = RequestContext.Principal.Identity.GetUserId();
             return userData.GetUserById(userId).First();
         }
-       
+
+
     }
 }

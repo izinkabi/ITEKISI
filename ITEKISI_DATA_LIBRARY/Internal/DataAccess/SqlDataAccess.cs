@@ -1,12 +1,9 @@
-﻿using System;
+﻿using Dapper;
 using System.Collections.Generic;
-using System.Linq;
 using System.Configuration;
-using System.Text;
-using System.Threading.Tasks;
 using System.Data;
 using System.Data.SqlClient;
-using Dapper;
+using System.Linq;
 
 namespace ITEKISI_DATA_LIBRARY.Internal.DataAcces
 {
@@ -35,10 +32,10 @@ namespace ITEKISI_DATA_LIBRARY.Internal.DataAcces
 
             using (IDbConnection connection = new SqlConnection(connectionString))
             {
-             var affectedrows = connection.Execute(storedProcedure, parameters, commandType: CommandType.StoredProcedure);
-             return affectedrows;
+                var affectedrows = connection.Execute(storedProcedure, parameters, commandType: CommandType.StoredProcedure);
+                return affectedrows;
             }
-           
+
         }
     }
 }

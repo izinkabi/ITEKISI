@@ -1,11 +1,8 @@
-﻿using ITEKISI_API.Models;
-using ITEKISI_DATA_LIBRARY.DataAccess;
+﻿using ITEKISI_DATA_LIBRARY.DataAccess;
 using ITEKISI_DATA_LIBRARY.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Net;
-using System.Net.Http;
 using System.Web.Http;
 
 namespace ITEKISI_API.Controllers
@@ -17,26 +14,26 @@ namespace ITEKISI_API.Controllers
         // GET: api/Taxi
         public TaxiModel GetTaxiById(int id)
         {
-            
+
             try
             {
                 TaxiData taxi = new TaxiData();
-               return taxi.GetTaxiById(id).First();
+                return taxi.GetTaxiById(id).First();
 
             }
             catch (Exception ex)
             {
 
                 throw new ArgumentException("We cannot find the taxi you are looking for", ex);
-                
+
             }
             finally
             {
                 //DO SOMETHING HERE LATEr
 
-                
+
             }
-           
+
         }
 
         // GET: api/Taxis/5
@@ -57,6 +54,6 @@ namespace ITEKISI_API.Controllers
             int rowsAfected = taxi.DeleteTaxiInfor(model);
             return rowsAfected;
         }
-       
+
     }
 }

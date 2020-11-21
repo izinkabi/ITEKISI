@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-
-namespace ITEKISI_API.Models
+﻿namespace ITEKISI_API.Models
 {
     public class TaxiRoute
     {
@@ -34,7 +29,7 @@ namespace ITEKISI_API.Models
 
     }
     public class DeleteTaxiRouteBindingModel
-    {       
+    {
         public int Id { get; set; }
     }
 }
