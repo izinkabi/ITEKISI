@@ -21,6 +21,12 @@ namespace ITEKISI_API.Controllers
             string userId = RequestContext.Principal.Identity.GetUserId();
             return userData.GetUserById(userId).First();
         }
-       
+
+        public void PostUser(UserModel val)
+        {
+            UserData userData = new UserData();
+            userData.PostUserInfo(val);
+        }
+
     }
 }
