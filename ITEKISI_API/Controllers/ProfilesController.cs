@@ -16,15 +16,16 @@ namespace ITEKISI_API.Controllers
     [RoutePrefix("api/Profile")]
     public class ProfilesController : ApiController
     {
-        // GET: api/Profiles
-        public ProfileModel GetProfileId()
+        // GET: api/Profile/{id}
+        [HttpGet]
+        public ProfileModel GetById()
         {
             ProfileData profileData = new ProfileData();
             string userId = RequestContext.Principal.Identity.GetUserId();
             return profileData.GetProfileById(userId).First();
         }
 
+        }
+ }
 
-    }
-
-}
+   
