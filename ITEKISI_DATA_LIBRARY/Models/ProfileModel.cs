@@ -1,12 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace ITEKISI_DATA_LIBRARY.Models
+﻿namespace ITEKISI_DATA_LIBRARY.Models
 {
-   public class ProfileModel
+    public class ProfileModel
     {
         public int Id { get; set; }
         public string UserId { get; set; }
@@ -17,6 +11,12 @@ namespace ITEKISI_DATA_LIBRARY.Models
         public string Gender { get; set; }
         public int AccessId { get; set; }
     }
+
+    public class ProfileBindingModel
+    {
+        public string UserId { get; set; }
+    }
+        
 
     public class DeleteProfileBindingModel
     {

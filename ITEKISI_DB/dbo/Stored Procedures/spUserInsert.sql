@@ -1,10 +1,10 @@
 ﻿CREATE PROCEDURE [dbo].[spUserInsert]
-	@id nvarchar(50) = '',
-	@username nvarchar(50) = '',
-	@password nvarchar(50) = '',
-	@profileId int 
+	@Id int = 0,
+	@UserName VARCHAR (100) = '',
+	@Password VARCHAR (100) = ''
 AS
-BEGIN
-	INSERT INTO Users (Id,Username,[Password],ProfileId)
-	VALUES (@id,@username,@password,@profileId)
-END
+
+Begin
+	INSERT INTO Users (Id,Username,Password)
+	VALUES (@Id,@Username,@Password)
+End

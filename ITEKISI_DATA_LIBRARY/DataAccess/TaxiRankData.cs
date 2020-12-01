@@ -1,10 +1,6 @@
 ﻿using ITEKISI_DATA_LIBRARY.Internal.DataAcces;
 using ITEKISI_DATA_LIBRARY.Models;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ITEKISI_DATA_LIBRARY.DataAccess
 {
@@ -31,11 +27,11 @@ namespace ITEKISI_DATA_LIBRARY.DataAccess
         }
         public int RemoveTaxiRank(int id)
         {
-           
+
             SqlDataAccess sqlData = new SqlDataAccess();
-            int rowsaffected = sqlData.SaveData("dbo.spTaxiRankRemove",new { Id=id}, "ITEKISI_DB");
+            int rowsaffected = sqlData.SaveData("dbo.spTaxiRankRemove", new { Id = id }, "ITEKISI_DB");
             return rowsaffected;
-            
+
         }
     }
 }

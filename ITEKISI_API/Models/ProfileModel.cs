@@ -1,20 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Web;
-
+﻿using System.ComponentModel.DataAnnotations;
 
 
 namespace ITEKISI_API.Models
 {
     public class ProfileModel
     {
-        [Required]
-        [Display(Name = "Id")]
+        
         public int Id { get; set; }
-        [Required]
-        [Display(Name = "Name")]
+
+        public string UserId { get; set; }
         public string Name { get; set; }
         [Required]
         [Display(Name = "IdNumber")]
@@ -32,17 +26,16 @@ namespace ITEKISI_API.Models
         [Display(Name = "AccessId")]
         public int AccessId { get; set; }
     }
+
     public class ProfileBindingModel
     {
-        [Required]
-        [Display(Name = "UserId")]
         public string UserId { get; set; }
-
     }
+
+
     public class DeleteProfileBindingModel
     {
         [Required]
-        [Display(Name = "Id")]
         public int Id { get; set; }
     }
 }
