@@ -5,7 +5,6 @@ using Microsoft.AspNet.Identity;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web.Http;
-using ProfileModel = ITEKISI_DATA_LIBRARY.Models.ProfileModel;
 
 
 namespace ITEKISI_API.Controllers

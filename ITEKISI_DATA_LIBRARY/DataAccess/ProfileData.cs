@@ -1,6 +1,5 @@
 ﻿using ITEKISI_DATA_LIBRARY.Internal.DataAcces;
 using ITEKISI_DATA_LIBRARY.Models;
-using System;
 using System.Collections.Generic;
 
 namespace ITEKISI_DATA_LIBRARY.DataAccess
