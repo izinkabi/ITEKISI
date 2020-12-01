@@ -9,7 +9,7 @@
         public string IdNumber { get; set; }
         public string Address { get; set; }
         public string Gender { get; set; }
-        public int AccessId { get; set; }
+        public string AccessId { get; set; }
     }
 
     public class ProfileBindingModel

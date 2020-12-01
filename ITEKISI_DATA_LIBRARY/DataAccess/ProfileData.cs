@@ -10,7 +10,7 @@ namespace ITEKISI_DATA_LIBRARY.DataAccess
         //get a profile
         public List<ProfileModel> GetProfileById(string Id)
         {
-            var p = new { id = Id };
+            var p = new { UserId = Id };
 
             SqlDataAccess sql = new SqlDataAccess();
             var output = sql.LoadData<ProfileModel, dynamic>("dbo.spProfileLookUp", p, "ITEKISI_DB");

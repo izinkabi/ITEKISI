@@ -2,6 +2,7 @@
 using ITEKISI_DATA_LIBRARY.DataAccess;
 using ITEKISI_DATA_LIBRARY.Models;
 using Microsoft.AspNet.Identity;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web.Http;
@@ -16,11 +17,21 @@ namespace ITEKISI_API.Controllers
         // GET: api/Profile/{id}
         [Route("ProfileInfo")]
         [HttpGet]
-        public ProfileModel GetById()
+        public ProfileModel GetById(string id)
         {
+
             ProfileData profileData = new ProfileData();
+         
             string userId = RequestContext.Principal.Identity.GetUserId();
-            return profileData.GetProfileById(userId).First();
+            if (id.Equals(userId))
+            {
+                userId = id;
+            }
+            else
+            {
+                userId = id;
+            }
+            return profileData.GetProfileById(userId).First(); ;
         }
         // GET: api/Profiles
         [Route("Profiles")]

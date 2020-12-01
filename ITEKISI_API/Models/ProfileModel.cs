@@ -11,7 +11,7 @@ namespace ITEKISI_API.Models
         public string UserId { get; set; }
         public string Name { get; set; }
         [Required]
-        [Display(Name = "IdNumber")]
+        [Display(Name = "Surname")]
         public string Surname { get; set; }
         [Required]
         [Display(Name = "IdNumber")]
@@ -24,7 +24,7 @@ namespace ITEKISI_API.Models
         public string Gender { get; set; }
         [Required]
         [Display(Name = "AccessId")]
-        public int AccessId { get; set; }
+        public string AccessId { get; set; }
     }
 
     public class ProfileBindingModel
