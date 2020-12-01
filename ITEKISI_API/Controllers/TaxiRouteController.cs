@@ -3,8 +3,6 @@ using ITEKISI_DATA_LIBRARY.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Net;
-using System.Net.Http;
 using System.Web.Http;
 
 namespace ITEKISI_API.Controllers
@@ -29,9 +27,10 @@ namespace ITEKISI_API.Controllers
             }
             finally
             {
-                //DO SOMETHING HERE LATEr
 
 
+                TaxiRouteData taxiRoute = new TaxiRouteData();
+                taxiRoute.GetTaxiRouteById(id).First();
             }
 
         }
@@ -57,8 +56,8 @@ namespace ITEKISI_API.Controllers
             int rowsAfected = taxiRoute.RemoveTaxiRoute(model);
             return rowsAfected;
         }
-  
-        
+
+
 
     }
 }

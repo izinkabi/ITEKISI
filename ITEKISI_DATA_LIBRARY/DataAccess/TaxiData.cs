@@ -1,14 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using ITEKISI_DATA_LIBRARY.Internal.DataAcces;
 using ITEKISI_DATA_LIBRARY.Models;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using ITEKISI_DATA_LIBRARY.Internal.DataAcces;
+using System.Collections.Generic;
 
 namespace ITEKISI_DATA_LIBRARY.DataAccess
 {
-   public class TaxiData
+    public class TaxiData
     {
 
         public List<TaxiModel> GetTaxiById(int Id)
