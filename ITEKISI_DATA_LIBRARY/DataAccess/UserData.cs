@@ -15,12 +15,12 @@ namespace ITEKISI_DATA_LIBRARY.DataAccess
             return output;
         }
 
-        private List<UserModel> GetUserByUsername(string email)
+        public List<UserModel> GetUserByUsername(string email)
         {
             var p = new { Email = email };
 
             SqlDataAccess sql = new SqlDataAccess();
-            var output = sql.LoadData<UserModel, dynamic>("dbo.spASPUserLoopUp", p, "DefaultConnection");
+            var output = sql.LoadData<UserModel, dynamic>("dbo.spASPUserLookUp", p, "DefaultConnection");
             return output; 
         }
         //con-st-name [DefaultConnection]

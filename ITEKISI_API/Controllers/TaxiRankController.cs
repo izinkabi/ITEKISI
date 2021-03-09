@@ -7,7 +7,7 @@ using System.Web.Http;
 namespace ITEKISI_API.Controllers
 {
 
-    [Authorize]
+    
     [RoutePrefix("api/TaxiRanks")]
     public class TaxiRankController : ApiController
     {

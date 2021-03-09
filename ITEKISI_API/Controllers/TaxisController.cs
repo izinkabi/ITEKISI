@@ -7,7 +7,7 @@ using System.Web.Http;
 
 namespace ITEKISI_API.Controllers
 {
-    [Authorize]
+    
 
     public class TaxisController : ApiController
     {
@@ -42,7 +42,7 @@ namespace ITEKISI_API.Controllers
             TaxiData taxi = new TaxiData();
             return taxi.GetTaxis().ToList();
         }
-        public void PostTaxi(TaxiModel val)
+        public void PostTaxi(InsertBinding val)
         {
             TaxiData taxi = new TaxiData();
             taxi.PostTaxiInfo(val);

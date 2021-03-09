@@ -10,7 +10,7 @@ using System.Web.Http;
 
 namespace ITEKISI_API.Controllers
 {
-    [Authorize]
+   
     [RoutePrefix("api/Profile")]
     public class ProfilesController : ApiController
     {
@@ -44,7 +44,7 @@ namespace ITEKISI_API.Controllers
         [Route("RegisterProfile")]
         //Post:api/Profile/{id}
         [HttpPost]
-        public void PostProfile(ProfileModel profileModel)
+        public void PostProfile(ProfileInsertModel profileModel)
         {
 
             ProfileData profileData = new ProfileData();
@@ -53,8 +53,8 @@ namespace ITEKISI_API.Controllers
             {
                 //This is temporary since the userId will be gotten via the pbm
                 //getting the current logged user id
-                string userId = RequestContext.Principal.Identity.GetUserId();
-                profileModel.UserId = userId;
+                //string userId = RequestContext.Principal.Identity.GetUserId();
+                //  profileModel.UserId = userId;
 
                 profileData.PostProfile(profileModel);
             }

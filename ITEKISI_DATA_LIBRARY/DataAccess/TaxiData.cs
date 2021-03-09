@@ -21,10 +21,10 @@ namespace ITEKISI_DATA_LIBRARY.DataAccess
             return output;
         }
 
-        public void PostTaxiInfo(TaxiModel val)
+        public void PostTaxiInfo(InsertBinding val)
         {
             SqlDataAccess sql = new SqlDataAccess();
-            sql.SaveData<TaxiModel>("dbo.spTaxiInsert", val, "ITEKISI_DB");
+            sql.SaveData<InsertBinding>("dbo.spTaxiInsert", val, "ITEKISI_DB");
         }
 
         public int DeleteTaxiInfor(DeleteTaxiBindingModel model)

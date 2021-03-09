@@ -7,6 +7,7 @@ using System.Web.Http;
 
 namespace ITEKISI_API.Controllers
 {
+    [RoutePrefix("api/TaxiRoute")]
     public class TaxiRouteController : ApiController
     {
         // GET: api/Taxi

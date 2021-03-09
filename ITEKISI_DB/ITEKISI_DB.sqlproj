@@ -93,6 +93,7 @@
     <Build Include="dbo\Stored Procedures\spProfileLookUp.sql" />
     <Build Include="dbo\Stored Procedures\spProfileRemove.sql" />
     <Build Include="dbo\Stored Procedures\spUserInsert.sql" />
+    <Build Include="dbo\Stored Procedures\spASPUserLookUp.sql" />
   </ItemGroup>
   <ItemGroup>
     <RefactorLog Include="ITEKISI_DB.refactorlog" />

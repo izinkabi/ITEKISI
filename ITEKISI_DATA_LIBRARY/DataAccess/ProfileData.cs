@@ -25,10 +25,10 @@ namespace ITEKISI_DATA_LIBRARY.DataAccess
             return output;
         }
 
-        public void PostProfile(ProfileModel val)
+        public void PostProfile(ProfileInsertModel val)
         {
             SqlDataAccess sql = new SqlDataAccess();
-            sql.SaveData<ProfileModel>("dbo.spProfileInsert", val, "ITEKISI_DB");
+            sql.SaveData<ProfileInsertModel>("dbo.spProfileInsert", val, "ITEKISI_DB");
         }
 
 
