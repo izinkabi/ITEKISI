@@ -1,5 +1,5 @@
 ﻿CREATE TABLE [dbo].[Profile] (
-    [Id]       NVARCHAR (50)  NOT NULL,
+    [Id]       NVARCHAR (50)  NOT NULL DEFAULT 1,
     [UserId]   NVARCHAR (50)  NOT NULL,
     [Name]     NVARCHAR (50)  NULL,
     [Surname]  NVARCHAR (50)  NULL,

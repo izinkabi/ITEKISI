@@ -8,12 +8,11 @@ namespace ITEKISI_DATA_LIBRARY.DataAccess
     public class ProfileData
     {
         //get a profile
-        public List<ProfileModel> GetProfileById(string Id)
+        public List<ProfileBindingModel> GetProfileById(string userId)
         {
-            var p = new { id = Id };
-
+            var p = new { UserId = userId };
             SqlDataAccess sql = new SqlDataAccess();
-            var output = sql.LoadData<ProfileModel, dynamic>("dbo.spProfileLookUp", p, "ITEKISI_DB");
+            var output = sql.LoadData<ProfileBindingModel, dynamic>("dbo.spProfileLookUp",p, "ITEKISI_DB");
             return output;
         }
 

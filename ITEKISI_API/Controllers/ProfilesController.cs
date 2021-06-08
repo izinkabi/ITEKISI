@@ -16,10 +16,10 @@ namespace ITEKISI_API.Controllers
         // GET: api/Profile/{id}
         [Route("ProfileInfo")]
         [HttpGet]
-        public ProfileModel GetById()
+        public ProfileBindingModel GetById(string userId)
         {
             ProfileData profileData = new ProfileData();
-            string userId = RequestContext.Principal.Identity.GetUserId();
+            //string userId = RequestContext.Principal.Identity.GetUserId();
             return profileData.GetProfileById(userId).First();
         }
         // GET: api/Profiles
@@ -42,8 +42,8 @@ namespace ITEKISI_API.Controllers
             {
                 //This is temporary since the userId will be gotten via the pbm
                 //getting the current logged user id
-                string userId = RequestContext.Principal.Identity.GetUserId();
-                profileModel.UserId = userId;
+                //string userId = RequestContext.Principal.Identity.GetUserId();
+                //profileModel.UserId = userId;
 
                 profileData.PostProfile(profileModel);
             }

@@ -1,5 +1,5 @@
 ﻿CREATE PROCEDURE [dbo].[spProfileInsert]
-	@Id int = 0,
+	
 	@Name nvarchar,
 	@Surname nvarchar,
 	@IDNumber nvarchar,
@@ -9,6 +9,6 @@
 
 AS
 BEGIN
-	INSERT INTO Profile ([Id],[Name],[Surname],[IDNumber],[Gender],[Address],[AccessId])
-	VALUES (@Id,@Name,@Surname, @IDNumber,@Gender,@Address,@AccessId)
+	INSERT INTO Profile ([Name],[Surname],[IDNumber],[Gender],[Address],[AccessId])
+	VALUES (@Name,@Surname, @IDNumber,@Gender,@Address,@AccessId)
 END
